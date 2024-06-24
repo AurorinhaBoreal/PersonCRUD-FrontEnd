@@ -1,5 +1,6 @@
 :root {
     /* COLORS */
+    --c-transparent: rgba(0,0,0,0);
     --c-white: #FFF;
     --c-black: #000;
     --c-purple: #b592fd;

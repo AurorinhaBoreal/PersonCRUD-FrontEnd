@@ -1,3 +1,4 @@
+
 .header {
     display: flex;
     height: 5rem;
@@ -9,7 +10,6 @@
     height: 100%;
     margin-left: 1rem;
     align-items: center;
-    margin-right: 48%;
 }
 
 .headerLogo {
@@ -33,11 +33,14 @@
 
 .headerSlogan {
     color: var(--c-white);
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
 }
 
 .headerIcons {
     display: flex;
     align-items: center;
+    justify-content: end;
     gap: 0.5rem;
+    width: 53vw;
 }

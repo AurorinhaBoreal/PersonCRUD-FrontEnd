@@ -1,8 +1,7 @@
 import { Box, Icon, IconButton, Image, Text } from "@chakra-ui/react"
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
-
-import styles from "./header.module.css"
+import styles from "./index.module.css"
 import logo from "@assets/images/logo.png"
 
 export default function Index() {
