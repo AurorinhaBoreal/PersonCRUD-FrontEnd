@@ -75,7 +75,7 @@ The first part of a project is the organization of it's own creation. This topic
 
 - 🚧 [US001] Create Structure for Home Page
   - ✅ [US001-1] Create Header
-  - 🚧 [US001-2] Create Main Image
+  - ✅ [US001-2] Create Main Image
   - 🚧 [US001-3] Create List Structure
   - ✅ [US001-4] Create Footer
 - 🚧 [US002] Create Header Hide Logic
