@@ -5,7 +5,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import styles from "./header.module.css"
 import logo from "@assets/images/logo.png"
 
-export default function index() {
+export default function Index() {
 
     return(
         <Box className={styles.header}>

@@ -1,0 +1,15 @@
+.footer {
+    display: flexbox;
+    background-color: var(--c-purple);
+    color: var(--c-black);
+    height: 5rem;
+    text-align: center;
+    align-content: center;
+}
+
+.waterMark {
+    display: flexbox;
+    text-align: end;
+    margin-right: 1rem;
+    color: rgba(0, 0, 0, 0.1);
+}

@@ -28,7 +28,7 @@
       "@api/*": ["api/*"],
       "@hooks/*": ["hooks/*"],
       "@types/*": ["types/*"],
-      "@utils/*": ["/utils/*"]
+      "@utils/*": ["utils/*"]
     },
   },
   "include": ["src"],
