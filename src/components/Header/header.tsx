@@ -1,6 +1,5 @@
 import { Box, Icon, IconButton, Image, Text } from "@chakra-ui/react"
-import { SearchIcon } from '@chakra-ui/icons'
-
+import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 
 import styles from "./header.module.css"
@@ -16,14 +15,24 @@ export default function index() {
                     PersonCRUD
                 </Text>
                 <Box className={styles.headerDivider}/>
+                <Text fontSize="2xl" className={styles.headerSlogan}>
+                    Virtual persons still look like real ones
+                </Text>
             </Box>
             <Box className={styles.headerIcons}>
-            <IconButton
+                <IconButton
+                        _hover="none"
+                        backgroundColor="#b592fd"
+                        colorScheme='gray'
+                        aria-label='GitHub Link'
+                        icon={<Icon as={FaGithubSquare} boxSize={50}/>}
+                    />
+                <IconButton
                     _hover="none"
                     backgroundColor="#b592fd"
                     colorScheme='gray'
-                    aria-label='GitHub Link'
-                    icon={<Icon as={FaGithubSquare} boxSize={50}/>}
+                    aria-label='LinkedIn Link'
+                    icon={<Icon as={FaLinkedin} boxSize={50}/>}
                 />
             </Box>
         </Box>

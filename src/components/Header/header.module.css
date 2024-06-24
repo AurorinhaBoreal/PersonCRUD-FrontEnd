@@ -9,6 +9,7 @@
     height: 100%;
     margin-left: 1rem;
     align-items: center;
+    margin-right: 48%;
 }
 
 .headerLogo {
@@ -31,10 +32,12 @@
 }
 
 .headerSlogan {
-
+    color: var(--c-white);
+    font-weight: 500;
 }
 
 .headerIcons {
     display: flex;
     align-items: center;
+    gap: 0.5rem;
 }
