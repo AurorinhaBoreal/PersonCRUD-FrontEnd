@@ -3,7 +3,7 @@ import PlusIcon from "@components/PlusIcon/index"
 import styles from "./index.module.css"
 import { Search2Icon } from "@chakra-ui/icons"
 
-export default function Index() {
+export default function PersonHeader() {
 
     return(
         <Box className={styles.pHeaderContainer} bg="main.100">

@@ -4,7 +4,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import styles from "./index.module.css"
 import logo from "@assets/images/logo.png"
 
-export default function Index() {
+export default function Header() {
     const linkedIn:string = "https://www.linkedin.com/in/aurora-kruschewsky"
     const gitHub:string = "https://github.com/AurorinhaBoreal?tab=overview&from=2024-06-01&to=2024-06-24"
 

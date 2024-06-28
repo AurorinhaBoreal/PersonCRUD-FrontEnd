@@ -6,7 +6,7 @@ interface buttonInfo {
     clickBehavior?: "createPerson" | "addAddress"
 }
 
-export default function Index(props:buttonInfo) {
+export default function PlusIcon(props:buttonInfo) {
 
     function verifyBehavior() {
         if (props.clickBehavior == "createPerson")

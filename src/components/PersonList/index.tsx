@@ -1,12 +1,13 @@
-import PersonHeader from "@components/PersonHeader";
+import PersonBody from "@components/PersonList/PersonBody";
+import PersonHeader from "@components/PersonList/PersonHeader";
 
 
-export default function Index() {
+export default function PersonList() {
 
     return(
         <>
             <PersonHeader/>
-            {/* <PersonBody/> */}
+            <PersonBody/>
         </>
     )
 }

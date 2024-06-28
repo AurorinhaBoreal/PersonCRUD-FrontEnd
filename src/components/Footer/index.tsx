@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react"
 import styles from "./index.module.css"
 
-export default function Index() {
+export default function Footer() {
 
     return(
         <Box className={styles.footer}>

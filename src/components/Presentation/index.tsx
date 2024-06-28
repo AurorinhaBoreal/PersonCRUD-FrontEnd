@@ -2,7 +2,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 import styles from "./index.module.css"
 import logo from "@assets/images/logo.png"
 
-export default function Index() {
+export default function Presentation() {
     
     return(
         <Box className={styles.presentationContainer}>
