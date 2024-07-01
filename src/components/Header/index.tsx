@@ -2,7 +2,7 @@ import { Box, Icon, IconButton, Image, Text } from "@chakra-ui/react"
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithubSquare } from "react-icons/fa";
 import styles from "./index.module.css"
-import logo from "@assets/images/logo.png"
+import logo from "@assets/logo.png"
 
 export default function Header() {
     const linkedIn:string = "https://www.linkedin.com/in/aurora-kruschewsky"

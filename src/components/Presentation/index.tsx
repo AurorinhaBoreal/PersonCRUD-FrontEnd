@@ -1,6 +1,6 @@
 import { Box, Image, Text } from "@chakra-ui/react";
 import styles from "./index.module.css"
-import logo from "@assets/images/logo.png"
+import logo from "@assets/logo.png"
 
 export default function Presentation() {
     
