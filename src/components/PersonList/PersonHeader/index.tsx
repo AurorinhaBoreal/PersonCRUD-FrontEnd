@@ -1,5 +1,5 @@
 import { Box, Input, Text, IconButton } from "@chakra-ui/react"
-import PlusIcon from "@components/PlusIcon/index"
+import PlusIcon from "@components/Icons/PlusIcon/index"
 import styles from "./index.module.css"
 import { Search2Icon } from "@chakra-ui/icons"
 
@@ -7,7 +7,7 @@ export default function PersonHeader() {
 
     return(
         <Box className={styles.pHeaderContainer} bg="main.100">
-            <PlusIcon isButtonStyle={true} clickBehavior="createPerson"/>
+            <PlusIcon isOnCard={false} isButtonStyle clickBehavior="createPerson"/>
             <Text className={styles.pHeaderText}>
                 Person List
             </Text>
