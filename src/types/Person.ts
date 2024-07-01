@@ -4,6 +4,8 @@ interface Person {
     lastName: string,
     birthDate: string,
     age: number,
+    cpf: string,
+    photoId:number,
     hasMainAddress: boolean,
-    cpf: string
+    addresses: Address[]
   }
