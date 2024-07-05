@@ -1,0 +1,37 @@
+.presentationContainer {
+    height: 45rem;
+    background-image: url("/src/assets/home-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-position-x: center;
+    display: flex;
+    color: var(--c-white);
+}
+
+.contentBackground {
+    height: 16rem;
+    width: 100vw;
+    background-image: linear-gradient(var(--c-transparent), var(--c-black));
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+
+.presentationLogo {
+    margin: 0% 4%;
+    width: 8%;
+}
+
+.presentationTitle {
+    font-family: "Roboto Slab";
+    font-size: 4rem;
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+}
+
+.presentationSlogan {
+    font-family: "Roboto, sans-serif";
+    font-size: 2.5rem;
+    width: 70ch;
+}

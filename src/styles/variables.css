@@ -1,0 +1,10 @@
+:root {
+    /* COLORS */
+    --c-transparent: rgba(0,0,0,0);
+    --c-white: #FFF;
+    --c-black: #000;
+    --c-purple: #b592fd;
+    --c-darkPurple: #7d4be2;
+    --c-gray1: #e6e6e6;
+    --c-gray2: #9A9A9A;
+}

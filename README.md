@@ -74,10 +74,10 @@ The first part of a project is the organization of it's own creation. This topic
 ### US's - MVP
 
 - 🚧 [US001] Create Structure for Home Page
-  - 🚧 [US001-1] Create Header
-  - 🚧 [US001-2] Create Main Image
-  - 🚧 [US001-3] Create List Structure
-  - 🚧 [US001-4] Create Footer
+  - ✅ [US001-1] Create Header
+  - ✅ [US001-2] Create Main Image
+  - ✅ [US001-3] Create List Structure
+  - ✅ [US001-4] Create Footer
 - 🚧 [US002] Create Header Hide Logic
 - 🚧 [US003] Create Post Modals
   - 🚧 [US003-1] Create Person Create Modal
@@ -100,8 +100,8 @@ The first part of a project is the organization of it's own creation. This topic
 
 ### US's - EXTRA
 
-- 🚧 [US00X-1] Implement ChakraUI Themes
-- 🚧 [US00X-2] Implement ChakraUI Components Stylization
+- ✅ [US00X-1] Implement ChakraUI Themes
+- ✅ [US00X-2] Implement ChakraUI Components Stylization
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
