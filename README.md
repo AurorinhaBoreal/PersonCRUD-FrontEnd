@@ -55,17 +55,19 @@ As this project need the backEnd to work, we first need to run it.
 
     ```git clone https://github.com/AurorinhaBoreal/PersonCRUD-BackEnd.git```
 
-- Step 2: Create the PostgreSQL container for the backEnd.
+- Step 2: Go to the Back End directory and run the Back End Container using docker.
 
     ```docker compose up -d```
 
-- Step 3: Run the backEnd project using gradle.
+- Step 3: After these steps you can go to the front end directory and run the Front End Container.
 
-    ```gradle bootRun```
+  - Step 3.1: Build the image from the Dockerfile.
 
-- Step 4: After these steps you can run the frontEnd Project.
+    ```docker build -t person-frontend .```
 
-    ```npm run dev```
+  - Step 3.2: Create a container through that image and run it.
+
+    ```docker run -it -p 3000:80 person-frontend```
 
 ## Developing the Project
 
@@ -73,7 +75,7 @@ The first part of a project is the organization of it's own creation. This topic
 
 ### US's - MVP
 
-- 🚧 [US001] Create Structure for Home Page
+- ✅ [US001] Create Structure for Home Page
   - ✅ [US001-1] Create Header
   - ✅ [US001-2] Create Main Image
   - ✅ [US001-3] Create List Structure
