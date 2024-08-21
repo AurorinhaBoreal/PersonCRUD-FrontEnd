@@ -15,10 +15,10 @@ export default function PersonBody() {
     }
   return (
     <div>
-        {data?.map((person) => {
+        {data?.map((person, index) => {
             return (
                 <>
-                    <PersonCard person={person}/>
+                    <PersonCard index={index} person={person}/>
                 </>
             )
         })}

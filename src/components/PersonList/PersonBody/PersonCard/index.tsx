@@ -6,8 +6,13 @@ import PlusIcon from '@components/Icons/PlusIcon';
 import InfoIcon from '@components/Icons/InfoIcon';
 import RemoveIcon from '@components/Icons/RemoveIcon';
 import EditIconCustom from '@components/Icons/EditIcon';
+import { sendInfoAddress } from '@utils/sendInfoAddress';
 
-export default function PersonCard(props: {person: Person}) {
+interface info {
+    person: Person
+    index: number
+}
+export default function PersonCard(props: info) {
     const personInfo = props.person
     let showPlusIcon:boolean = false
     let showInfoIcon:boolean = false
@@ -16,7 +21,7 @@ export default function PersonCard(props: {person: Person}) {
     function findMainAddress(): number {       
         return personInfo.addresses.findIndex(address => address.mainAddress)
     }
-
+    
     // SE ADDRESSES FOR VAZIO -> PLUSICON
     if (personInfo.addresses.length == 0) {
         showPlusIcon = true
@@ -33,6 +38,8 @@ export default function PersonCard(props: {person: Person}) {
     }
 
     const addressInfo = personInfo.addresses[mainAddressIndex]
+
+    sendInfoAddress(personInfo.cpf);
 
     return (
     <>
@@ -66,7 +73,7 @@ export default function PersonCard(props: {person: Person}) {
                 <Icon className={styles.pinIcon} as={MdLocationPin} h="6rem" w="6rem" color="main.100"/>
                 <Box className={styles.cardInfoAddress}>
                     {showPlusIcon ? 
-                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress'/>) : 
+                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index}/>) : 
                         (<>
                             <Box className={styles.topInfo}>
                                 {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}
