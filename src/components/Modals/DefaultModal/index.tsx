@@ -1,11 +1,13 @@
 import { Modal, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/react'
 import CreatePersonBody from '../CreatePerson/Body'
+import AddAddressBody from '../AddAddress'
 
 interface modal {
     isOpen: any
     onOpen: any
     onClose: any
     type: string
+    index: number
 }
 
 export default function index(props: modal) {
@@ -19,6 +21,11 @@ export default function index(props: modal) {
             modalTitle = "Create Person"
             buttonText = "Create"
             modalBody = <CreatePersonBody buttonText={buttonText} />
+            break;
+        case "addAddress":
+            modalTitle = "Add Address"
+            buttonText = "Add"
+            modalBody = <AddAddressBody index={props.index} buttonText={buttonText} />;
             break;
         default:
             break;
