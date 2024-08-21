@@ -81,10 +81,10 @@ The first part of a project is the organization of it's own creation. This topic
   - ✅ [US001-3] Create List Structure
   - ✅ [US001-4] Create Footer
 - 🚧 [US002] Create Header Hide Logic
-- 🚧 [US003] Create Post Modals
-  - 🚧 [US003-1] Create Person Create Modal
-  - 🚧 [US003-2] Create Address Create Modal
-  - 🚧 [US003-3] Create Choose Avatar Modal
+- ✅ [US003] Create Post Modals
+  - ✅ [US003-1] Create Person Create Modal
+  - ✅ [US003-2] Create Address Create Modal
+  - ✅ [US003-3] Create Choose Avatar Modal
 - 🚧 [US004] Implement Post Method
   - 🚧 [US004-1] Implement Person Post 
   - 🚧 [US004-2] Implement Address Post
