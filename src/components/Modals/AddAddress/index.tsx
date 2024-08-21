@@ -42,7 +42,7 @@ export default function AddAddressBody(props: info) {
             setFormData({
                 addressIdentifier: 0,
                 personCpf: "",
-                mainAddress: false,
+                mainAddress: true,
                 country: "",
                 zipCode: "",
                 uf: "",
