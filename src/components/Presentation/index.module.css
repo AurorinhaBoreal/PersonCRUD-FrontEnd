@@ -1,5 +1,6 @@
 .presentationContainer {
     height: 45rem;
+    width: 100vw    ;
     background-image: url("/src/assets/home-image.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -11,7 +12,7 @@
 
 .contentBackground {
     height: 16rem;
-    width: 100vw;
+    width: 100%;
     background-image: linear-gradient(var(--c-transparent), var(--c-black));
     align-self: flex-end;
     display: flex;
