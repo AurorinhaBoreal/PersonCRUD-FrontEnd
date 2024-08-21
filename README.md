@@ -85,9 +85,9 @@ The first part of a project is the organization of it's own creation. This topic
   - ✅ [US003-1] Create Person Create Modal
   - ✅ [US003-2] Create Address Create Modal
   - ✅ [US003-3] Create Choose Avatar Modal
-- 🚧 [US004] Implement Post Method
-  - 🚧 [US004-1] Implement Person Post 
-  - 🚧 [US004-2] Implement Address Post
+- ✅ [US004] Implement Post Method
+  - ✅ [US004-1] Implement Person Post 
+  - ✅ [US004-2] Implement Address Post
 - 🚧 [US005] Create Update Modals
   - 🚧 [US005-1] Create Person Update Modal
   - 🚧 [US005-2] Create Address Update Modal
