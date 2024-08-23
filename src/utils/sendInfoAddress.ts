@@ -9,4 +9,8 @@ async function receiveInfoAddress() {
     return info;
 }
 
-export {sendInfoAddress, receiveInfoAddress};
+async function receiveSpecificInfo(index: number) {
+    return info[index]
+}
+
+export {sendInfoAddress, receiveInfoAddress, receiveSpecificInfo};
