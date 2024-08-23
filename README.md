@@ -92,7 +92,7 @@ The first part of a project is the organization of it's own creation. This topic
   - ✅ [US005-1] Create Person Update Modal
   - ✅ [US005-2] Create Address Update Modal
 - 🚧 [US006] Implement Update Method
-  - 🚧 [US006-1] Implement Person Update
+  - ✅ [US006-1] Implement Person Update
   - 🚧 [US006-1] Implement Address Update
 - 🚧 [US007] Create Remaining Modals
   - 🚧 [US007-1] Create Person Info Modal
