@@ -1,6 +1,7 @@
 import { Modal, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from '@chakra-ui/react'
-import CreatePersonBody from '../CreatePerson/Body'
+import CreatePersonBody from '../CreatePerson'
 import AddAddressBody from '../AddAddress'
+import UpdatePerson from '../UpdatePerson'
 
 interface modal {
     isOpen: any
@@ -21,6 +22,11 @@ export default function index(props: modal) {
             modalTitle = "Create Person"
             buttonText = "Create"
             modalBody = <CreatePersonBody buttonText={buttonText} />
+            break;
+        case "updatePerson":
+            modalTitle = "Update Person"
+            buttonText = "Update"
+            modalBody = <UpdatePerson buttonText={buttonText} index={props.index}/>
             break;
         case "addAddress":
             modalTitle = "Add Address"
