@@ -8,7 +8,7 @@ interface info {
     index: number
 }
 
-export default function AddAddressBody(props: info) {
+export default function AddAddress(props: info) {
     const toast = useToast();
     const [handledCpf, setHandledCpf] = useState(false)
     const identifier = Math.floor(100000000 + Math.random() * 900000000);

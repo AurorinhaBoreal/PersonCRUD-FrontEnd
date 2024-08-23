@@ -89,11 +89,8 @@ export default function PersonCard(props: info) {
                 </Box>
             </Box>
             <Box className={styles.interactiveIcons}>
-                {showPlusIcon ? <Box m={5}></Box> : (
-                    <>
-                        <RemoveIcon isButtonStyle isOnMain/>
-                        <EditIconCustom isButtonStyle isOnMain/>
-                    </>)}
+                <RemoveIcon isButtonStyle isOnMain/>
+                <EditIconCustom isButtonStyle index={props.index} modalSeelct='updatePerson'/>
             </Box>
         </Box>
     </>
