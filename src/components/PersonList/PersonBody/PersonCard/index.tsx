@@ -12,6 +12,7 @@ interface info {
     person: Person
     index: number
 }
+
 export default function PersonCard(props: info) {
     const personInfo = props.person
     let showPlusIcon:boolean = false
@@ -36,7 +37,7 @@ export default function PersonCard(props: info) {
 
     // SE ADDRESSES APENAS TIVER SECONDARY ADDRESSES -> PLUSICON E INFOBUTTON
     if (!personInfo.hasMainAddress) {
-        showAddress = true
+        showAddress = false
         showPlusIcon = true
         showInfoIcon = true
     }
