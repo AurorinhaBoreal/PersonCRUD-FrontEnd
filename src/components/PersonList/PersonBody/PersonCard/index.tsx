@@ -37,7 +37,7 @@ export default function PersonCard(props: info) {
 
     // SE ADDRESSES APENAS TIVER SECONDARY ADDRESSES -> PLUSICON E INFOBUTTON
     if (!personInfo.hasMainAddress) {
-        showAddress = true
+        showAddress = false
         showPlusIcon = true
         showInfoIcon = true
     }

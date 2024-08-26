@@ -72,7 +72,7 @@ export default function PersonInfo(props: info) {
 
     const setPersonAvatar = () => {
         const avatars = getAllAvatar()
-        setAvatar(avatars[props.index+1])
+        if (data != undefined) setAvatar(avatars[data?.photoId-1])
     }
 
     const formatCpf = (cpf: string | undefined) => {
