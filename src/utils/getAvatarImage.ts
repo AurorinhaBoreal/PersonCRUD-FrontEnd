@@ -16,7 +16,13 @@ import avatar15 from "@assets/avatars/avatar15.png"
 
 const avatars = [avatar1, avatar2, avatar3, avatar4, avatar5, avatar6, avatar7, avatar8, avatar9, avatar10, avatar11, avatar12, avatar13, avatar14, avatar15]
 
-export default function getAvatarImage(photoId: number) {
+const getAvatarImage = (photoId: number) => {
     let avatar = avatars[photoId - 1]
     return avatar
 }
+
+const getAllAvatar = () => {
+    return avatars;
+}
+
+export {getAvatarImage, getAllAvatar};

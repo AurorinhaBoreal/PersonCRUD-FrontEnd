@@ -66,7 +66,7 @@ export default function PersonCard(props: {person: Person}) {
                 <Icon className={styles.pinIcon} as={MdLocationPin} h="6rem" w="6rem" color="main.100"/>
                 <Box className={styles.cardInfoAddress}>
                     {showPlusIcon ? 
-                        (<PlusIcon isButtonStyle isOnCard clickBehavior='addAddress'/>) : 
+                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress'/>) : 
                         (<>
                             <Box className={styles.topInfo}>
                                 {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}

@@ -1,0 +1,48 @@
+.avatarWrapper {
+    margin: 1vw 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.avatarImg {
+    width: 8vw;
+    border-radius: 100px;
+}
+
+.imageDefined {
+    border: solid 5px var(--c-purple) !important;
+}
+
+.avatarTitle {
+    font-family: "Inter", sans-serif;
+    font-size: 2vw;
+    font-weight: 800;
+    color: var(--c-purple);
+}
+
+.optionsWrapper {
+    margin-top: 2vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.avatarImgs {
+    width: 4vw;
+    border-radius: 100px;
+}
+
+.avatarImgs:hover {
+    cursor: pointer;
+    border: solid 4px var(--c-purple);
+}
+
+.avatarBtn {
+    width: 60%;
+    margin: 2vw 0vw;
+}
+
+input {
+    width: 80% !important;
+}

@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-export default class personService {
+export default class addressService {
     
-    public static getPerson = async () =>{
+    public static getSpecific = async () =>{
         try {
-          const response = await axios.get<Person[]>("http://localhost:8080/person")
+          const response = await axios.get<Address[]>("http://localhost:8080/person")
           const data = response.data;
           return data;
         } catch(error) {
@@ -12,9 +12,11 @@ export default class personService {
           };
       }
 
-    public static createPerson = async (dataPerson:CreatePersonDTO) => {
+    public static createAddress = async (dataPerson:AddAddressDTO) => {
       try {
-        await axios.post("http://localhost:8080/person/create", dataPerson)
+        const cpf = dataPerson.personCpf
+        console.log("TO REQUEST "+cpf)
+        await axios.post(`http://localhost:8080/address/create/${cpf}`, dataPerson)
         return null;
       } catch (error) {
         if (axios.isAxiosError<Record<string, unknown>>(error)) {
