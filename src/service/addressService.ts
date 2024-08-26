@@ -1,10 +1,11 @@
 import axios from 'axios'
 
 export default class addressService {
-    
+    private static readonly API_URL = import.meta.env.VITE_API_URL;
+
     public static getSpecific = async () =>{
         try {
-          const response = await axios.get<Address[]>("http://localhost:8080/person")
+          const response = await axios.get<Address[]>(`${this.API_URL}/person`)
           const data = response.data;
           return data;
         } catch(error) {
@@ -15,7 +16,7 @@ export default class addressService {
     public static createAddress = async (dataPerson:AddAddressDTO) => {
       try {
         const cpf = dataPerson.personCpf
-        await axios.post(`http://localhost:8080/address/create/${cpf}`, dataPerson)
+        await axios.post(`${this.API_URL}/address/create/${cpf}`, dataPerson)
         return null;
       } catch (error) {
         if (axios.isAxiosError<Record<string, unknown>>(error)) {
