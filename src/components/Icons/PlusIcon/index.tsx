@@ -7,11 +7,11 @@ interface buttonInfo {
     isOnCard: boolean;
     modalSelect: "createPerson" | "addAddress"
     index: number
+    cpf: string
 }
 
 export default function PlusIcon(props: buttonInfo) {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
     return (
         <>
             {props.isButtonStyle ?
@@ -33,13 +33,13 @@ export default function PlusIcon(props: buttonInfo) {
                     />
                 ) :
                 <AddIcon
-                    color="main.100"
-                    _hover={{ color: "frost.300" }}
+                    color="main.300"
+                    _hover={{ color: "frost.200" }}
                     aria-label="Add Secondary Address"
                     w="1.3rem" h="1.3rem"
                 />
             }
-            <DefaultModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} index={props.index} type={props.modalSelect} />
+            <DefaultModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} index={props.index} type={props.modalSelect} cpf={props.cpf}/>
         </>
     )
 }
