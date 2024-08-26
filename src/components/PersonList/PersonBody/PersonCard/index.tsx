@@ -12,6 +12,7 @@ interface info {
     person: Person
     index: number
 }
+
 export default function PersonCard(props: info) {
     const personInfo = props.person
     let showPlusIcon:boolean = false
