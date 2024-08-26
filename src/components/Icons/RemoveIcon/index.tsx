@@ -23,16 +23,18 @@ export default function RemoveIcon(props:buttonInfo) {
                 <Icon
                     size={"xl"}
                     as={CiCircleRemove}
-                    color="frost.300"
-                    _hover={{ color: "main.100"}}
-                    aria-label="Add Main Address"
+                    color="main.300"
+                    _hover={{ color: "frost.200"}}
+                    w="1.3rem" h="1.3rem"
+                    aria-label="Remove Main Address"
                 /> : 
                 <Icon 
                 size={"xl"}
                 as={CiCircleRemove}
                 color="main.100"
                 _hover={{ color: "frost.300"}}
-                aria-label="Add Secondary Address"
+                w="1.3rem" h="1.3rem"
+                aria-label="Remove Secondary Address"
             />)}
     </>
   )

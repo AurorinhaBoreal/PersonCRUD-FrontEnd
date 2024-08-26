@@ -13,12 +13,13 @@ export default function PersonBody() {
         const data = await personService.getPerson();
         setData(data)
     }
+    
   return (
     <div>
-        {data?.map((person) => {
+        {data?.map((person, index) => {
             return (
                 <>
-                    <PersonCard person={person}/>
+                    <PersonCard index={index} person={person}/>
                 </>
             )
         })}

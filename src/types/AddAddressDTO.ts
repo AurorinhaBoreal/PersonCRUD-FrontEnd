@@ -1,5 +1,6 @@
-interface Address {
-    addressIdentifier:number,
+interface AddAddressDTO {
+    addressIdentifier: number
+    personCpf: string
     mainAddress: boolean
     country: string
     zipCode: string

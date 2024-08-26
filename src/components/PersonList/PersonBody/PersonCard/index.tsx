@@ -6,33 +6,50 @@ import PlusIcon from '@components/Icons/PlusIcon';
 import InfoIcon from '@components/Icons/InfoIcon';
 import RemoveIcon from '@components/Icons/RemoveIcon';
 import EditIconCustom from '@components/Icons/EditIcon';
+import { sendInfoAddress } from '@utils/sendInfoAddress';
 
-export default function PersonCard(props: {person: Person}) {
+interface info {
+    person: Person
+    index: number
+}
+export default function PersonCard(props: info) {
     const personInfo = props.person
     let showPlusIcon:boolean = false
     let showInfoIcon:boolean = false
+    let showAddress: boolean = false
     const mainAddressIndex:number = findMainAddress()
 
     function findMainAddress(): number {       
         return personInfo.addresses.findIndex(address => address.mainAddress)
     }
-
+    
     // SE ADDRESSES FOR VAZIO -> PLUSICON
     if (personInfo.addresses.length == 0) {
         showPlusIcon = true
     } else
     // SE ADDRESSES APENAS TIVER MAINADDRESS -> INFOBUTTON
     if (personInfo.hasMainAddress && props.person.addresses.length >= 1) {
+        showAddress = true
         showInfoIcon = true
+        showPlusIcon = true
     } else
 
     // SE ADDRESSES APENAS TIVER SECONDARY ADDRESSES -> PLUSICON E INFOBUTTON
     if (!personInfo.hasMainAddress) {
+        showAddress = true
         showPlusIcon = true
         showInfoIcon = true
     }
 
     const addressInfo = personInfo.addresses[mainAddressIndex]
+
+    sendInfoAddress(personInfo.cpf);
+
+    const formatCpf = (cpf: string) => {
+        if (cpf) {
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        }
+    }
 
     return (
     <>
@@ -57,7 +74,7 @@ export default function PersonCard(props: {person: Person}) {
                             {personInfo.lastName}
                         </Text>
                         <Text className={styles.cpfText}>
-                                - {personInfo.cpf}
+                                - {formatCpf(personInfo.cpf)}
                         </Text>
                     </Box>
                 </Box>
@@ -65,8 +82,7 @@ export default function PersonCard(props: {person: Person}) {
             <Box style={{display: "flex", alignItems: "center", marginRight: "15vw", width: "50%"}}>
                 <Icon className={styles.pinIcon} as={MdLocationPin} h="6rem" w="6rem" color="main.100"/>
                 <Box className={styles.cardInfoAddress}>
-                    {showPlusIcon ? 
-                        (<PlusIcon isButtonStyle isOnCard clickBehavior='addAddress'/>) : 
+                    {showAddress ?  
                         (<>
                             <Box className={styles.topInfo}>
                                 {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}
@@ -74,19 +90,21 @@ export default function PersonCard(props: {person: Person}) {
                             <Box className={styles.bottomInfo}>
                                 {addressInfo.city}, {addressInfo.uf} - {addressInfo.zipCode} ({addressInfo.country})
                             </Box>
-                        </>)}
+                        </>) : <></>}
+                </Box>
+                <Box ml={"1vw"}>
+                    {showPlusIcon ? (
+                        <PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index} cpf={props.person.cpf}/>
+                        ) : <></>}
                 </Box>
                 <Box>
                     {showInfoIcon ? 
-                    (<InfoIcon />) : <></>}
+                    (<InfoIcon index={props.index} cpf={props.person.cpf}/>) : <></>}
                 </Box>
             </Box>
             <Box className={styles.interactiveIcons}>
-                {showPlusIcon ? <Box m={5}></Box> : (
-                    <>
-                        <RemoveIcon isButtonStyle isOnMain/>
-                        <EditIconCustom isButtonStyle isOnMain/>
-                    </>)}
+                <RemoveIcon isButtonStyle isOnMain/>
+                <EditIconCustom isButtonStyle index={props.index} modalSeelct='updatePerson' cpf={props.person.cpf}/>
             </Box>
         </Box>
     </>

@@ -1,5 +1,5 @@
 import { Icon, Avatar } from '@chakra-ui/react'
-import getAvatarImage from '@utils/getAvatarImage';
+import { getAvatarImage } from '@utils/getAvatarImage';
 import { FaRegUserCircle } from "react-icons/fa";
 
 interface avatar {
