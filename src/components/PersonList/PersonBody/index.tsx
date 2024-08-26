@@ -13,6 +13,7 @@ export default function PersonBody() {
         const data = await personService.getPerson();
         setData(data)
     }
+    
   return (
     <div>
         {data?.map((person, index) => {

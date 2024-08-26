@@ -57,7 +57,6 @@ export default function CreatePerson(props: info) {
 
         if (name == "cpf") {
             const formattedCPF: string = value.replace(/\D/g, '');
-            console.log(formattedCPF)
             setFormData({
                 ...formData,
                 cpf: formattedCPF,

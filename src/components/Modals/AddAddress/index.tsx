@@ -61,7 +61,6 @@ export default function AddAddress(props: info) {
                 isClosable: true
               })
         }
-        console.log(formData)
     }
 
     const handleRadio = (value: string) => {
