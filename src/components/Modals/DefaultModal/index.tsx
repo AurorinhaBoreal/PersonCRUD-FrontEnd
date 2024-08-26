@@ -2,6 +2,7 @@ import { Modal, ModalCloseButton, ModalContent, ModalHeader, ModalOverlay } from
 import CreatePersonBody from '../CreatePerson'
 import AddAddressBody from '../AddAddress'
 import UpdatePerson from '../UpdatePerson'
+import PersonInfo from '../PersonInfo'
 
 interface modal {
     isOpen: any
@@ -9,11 +10,11 @@ interface modal {
     onClose: any
     type: string
     index: number
+    cpf: string
 }
 
 export default function index(props: modal) {
     const { isOpen, onClose } = props
-
     let modalTitle = ""
     let modalBody = null
     let buttonText = ""
@@ -28,10 +29,20 @@ export default function index(props: modal) {
             buttonText = "Update"
             modalBody = <UpdatePerson buttonText={buttonText} index={props.index}/>
             break;
+        case "personInfo":
+            modalTitle = "Info Person"
+            modalBody = <PersonInfo index={props.index} cpf={props.cpf}/>
+            break;
         case "addAddress":
             modalTitle = "Add Address"
             buttonText = "Add"
             modalBody = <AddAddressBody index={props.index} buttonText={buttonText} />;
+            break;
+        case "updateMainAddress":
+
+            break;
+        case "updateSecondaryAddress":
+
             break;
         default:
             break;
