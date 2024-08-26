@@ -5,7 +5,8 @@ import DefaultModal from "@components/Modals/DefaultModal";
 interface buttonInfo {
     isButtonStyle: boolean;
     isOnCard: boolean;
-    modalSelect?: "createPerson" | "addAddress"
+    modalSelect: "createPerson" | "addAddress"
+    index: number
 }
 
 export default function PlusIcon(props: buttonInfo) {
@@ -38,7 +39,7 @@ export default function PlusIcon(props: buttonInfo) {
                     w="1.3rem" h="1.3rem"
                 />
             }
-            <DefaultModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} type={"createPerson"} />
+            <DefaultModal isOpen={isOpen} onOpen={onOpen} onClose={onClose} index={props.index} type={props.modalSelect} />
         </>
     )
 }

@@ -15,7 +15,6 @@ export default class addressService {
     public static createAddress = async (dataPerson:AddAddressDTO) => {
       try {
         const cpf = dataPerson.personCpf
-        console.log("TO REQUEST "+cpf)
         await axios.post(`http://localhost:8080/address/create/${cpf}`, dataPerson)
         return null;
       } catch (error) {
