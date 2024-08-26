@@ -16,6 +16,7 @@ export default function PersonCard(props: info) {
     const personInfo = props.person
     let showPlusIcon:boolean = false
     let showInfoIcon:boolean = false
+    let showAddress: boolean = false
     const mainAddressIndex:number = findMainAddress()
 
     function findMainAddress(): number {       
@@ -28,11 +29,14 @@ export default function PersonCard(props: info) {
     } else
     // SE ADDRESSES APENAS TIVER MAINADDRESS -> INFOBUTTON
     if (personInfo.hasMainAddress && props.person.addresses.length >= 1) {
+        showAddress = true
         showInfoIcon = true
+        showPlusIcon = true
     } else
 
     // SE ADDRESSES APENAS TIVER SECONDARY ADDRESSES -> PLUSICON E INFOBUTTON
     if (!personInfo.hasMainAddress) {
+        showAddress = true
         showPlusIcon = true
         showInfoIcon = true
     }
@@ -78,8 +82,7 @@ export default function PersonCard(props: info) {
             <Box style={{display: "flex", alignItems: "center", marginRight: "15vw", width: "50%"}}>
                 <Icon className={styles.pinIcon} as={MdLocationPin} h="6rem" w="6rem" color="main.100"/>
                 <Box className={styles.cardInfoAddress}>
-                    {showPlusIcon ? 
-                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index} cpf={props.person.cpf}/>) : 
+                    {showAddress ?  
                         (<>
                             <Box className={styles.topInfo}>
                                 {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}
@@ -87,7 +90,12 @@ export default function PersonCard(props: info) {
                             <Box className={styles.bottomInfo}>
                                 {addressInfo.city}, {addressInfo.uf} - {addressInfo.zipCode} ({addressInfo.country})
                             </Box>
-                        </>)}
+                        </>) : <></>}
+                </Box>
+                <Box ml={"1vw"}>
+                    {showPlusIcon ? (
+                        <PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index} cpf={props.person.cpf}/>
+                        ) : <></>}
                 </Box>
                 <Box>
                     {showInfoIcon ? 
