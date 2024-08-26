@@ -1,5 +1,5 @@
 import { Box, Text, Button, Flex, Image, FormControl, FormLabel, Input, ModalBody, ModalFooter, useToast } from '@chakra-ui/react'
-import avatarDefault from "../../../../assets/avatar-icon.png"
+import avatarDefault from "../../../assets/avatar-icon.png"
 import InputMask from 'react-input-mask'
 import styles from "./createPerson.module.css"
 import personService from 'service/personService'
@@ -10,7 +10,7 @@ interface info {
     buttonText: string
 }
 
-export default function CreatePersonBody(props: info) {
+export default function CreatePerson(props: info) {
     const [avatar, setAvatar] = useState(avatarDefault)
     const toast = useToast();
 
