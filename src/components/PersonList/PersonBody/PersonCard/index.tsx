@@ -41,6 +41,12 @@ export default function PersonCard(props: info) {
 
     sendInfoAddress(personInfo.cpf);
 
+    const formatCpf = (cpf: string) => {
+        if (cpf) {
+            return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+        }
+    }
+
     return (
     <>
         <Box className={styles.cardContainer} marginY="0.5rem" paddingY="0.4rem">
@@ -64,7 +70,7 @@ export default function PersonCard(props: info) {
                             {personInfo.lastName}
                         </Text>
                         <Text className={styles.cpfText}>
-                                - {personInfo.cpf}
+                                - {formatCpf(personInfo.cpf)}
                         </Text>
                     </Box>
                 </Box>
@@ -73,7 +79,7 @@ export default function PersonCard(props: info) {
                 <Icon className={styles.pinIcon} as={MdLocationPin} h="6rem" w="6rem" color="main.100"/>
                 <Box className={styles.cardInfoAddress}>
                     {showPlusIcon ? 
-                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index}/>) : 
+                        (<PlusIcon isButtonStyle isOnCard modalSelect='addAddress' index={props.index} cpf={props.person.cpf}/>) : 
                         (<>
                             <Box className={styles.topInfo}>
                                 {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}
@@ -85,12 +91,12 @@ export default function PersonCard(props: info) {
                 </Box>
                 <Box>
                     {showInfoIcon ? 
-                    (<InfoIcon />) : <></>}
+                    (<InfoIcon index={props.index} cpf={props.person.cpf}/>) : <></>}
                 </Box>
             </Box>
             <Box className={styles.interactiveIcons}>
                 <RemoveIcon isButtonStyle isOnMain/>
-                <EditIconCustom isButtonStyle index={props.index} modalSeelct='updatePerson'/>
+                <EditIconCustom isButtonStyle index={props.index} modalSeelct='updatePerson' cpf={props.person.cpf}/>
             </Box>
         </Box>
     </>
