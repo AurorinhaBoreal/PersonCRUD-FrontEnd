@@ -1,10 +1,11 @@
 import axios from 'axios'
 
 export default class personService {
-    
+    private static readonly API_URL = import.meta.env.VITE_API_URL;  
+
     public static getPerson = async () =>{
       try {
-        const response = await axios.get<Person[]>("http://localhost:8080/person")
+        const response = await axios.get<Person[]>(`${this.API_URL}/person`)
         const data = response.data;
         return data;
       } catch(error) {
@@ -14,7 +15,7 @@ export default class personService {
 
     public static getSpecificPerson = async (cpf: string) => {
       try {
-        const response = await axios.get<Person>(`http://localhost:8080/person/${cpf}`)
+        const response = await axios.get<Person>(`${this.API_URL}/person/${cpf}`)
         const data = response.data;
         return data;
       } catch(error) {
