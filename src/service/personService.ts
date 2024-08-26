@@ -12,6 +12,16 @@ export default class personService {
       };
     }
 
+    public static getSpecificPerson = async (cpf: string) => {
+      try {
+        const response = await axios.get<Person>(`http://localhost:8080/person/${cpf}`)
+        const data = response.data;
+        return data;
+      } catch(error) {
+        (error);
+      };
+    }
+
     public static createPerson = async (dataPerson:CreatePersonDTO) => {
       try {
         await axios.post("http://localhost:8080/person/create", dataPerson)

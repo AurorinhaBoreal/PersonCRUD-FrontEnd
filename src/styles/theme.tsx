@@ -10,6 +10,7 @@ const theme = extendTheme({
     frost: {
       100: "#fff",
       200: "#e6e6e6",
+      250: "#d9d9d9",
       300: "#9A9A9A",
       400: "#000"
     }
