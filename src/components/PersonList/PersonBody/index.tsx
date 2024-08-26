@@ -11,7 +11,6 @@ export default function PersonBody() {
 
     const getData = async () => {
         const data = await personService.getPerson();
-        console.log(data)
         setData(data)
     }
     

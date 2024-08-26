@@ -25,7 +25,7 @@ export default class personService {
 
     public static createPerson = async (dataPerson:CreatePersonDTO) => {
       try {
-        await axios.post("http://localhost:8080/person/create", dataPerson)
+        await axios.post(`${this.API_URL}/person/create`, dataPerson)
         return null;
       } catch (error) {
         if (axios.isAxiosError<Record<string, unknown>>(error)) {
