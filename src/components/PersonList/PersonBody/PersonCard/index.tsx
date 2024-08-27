@@ -43,7 +43,7 @@ export default function PersonCard(props: info) {
     }
 
     const addressInfo = personInfo.addresses[mainAddressIndex]
-
+    console.log("WTF???"+personInfo.photoId)
     sendInfoAddress(personInfo.cpf);
 
     const formatCpf = (cpf: string) => {

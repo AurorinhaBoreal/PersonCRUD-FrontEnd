@@ -9,7 +9,7 @@ interface avatar {
 }
 
 export default function PersonAvatar(props:avatar) {
-
+  console.log("AVATAR"+props.avatarId)
   let personAvatar = getAvatarImage(props.avatarId)
   return (
     <>
