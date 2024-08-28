@@ -7,6 +7,8 @@ export default class personService {
       try {
         const response = await axios.get<Person[]>(`${this.API_URL}/person`)
         const data = response.data;
+        console.log("AVATAR2"+data)
+        console.log("DADOS"+data)
         return data;
       } catch(error) {
         (error);
@@ -42,9 +44,10 @@ export default class personService {
 
     public static updatePerson = async (formData: UpdatePersonDTO, cpf: string) => {
       if (cpf == undefined) {
-        throw Error("Cpf não foi definido")
+        throw Error("Cpf was not defined!")
       }
       try {
+        console.log(formData)
         await axios.patch<Person>(`http://localhost:8080/person/update/${cpf}`, formData)
         return null;
       } catch (error) {
