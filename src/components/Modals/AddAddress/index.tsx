@@ -101,40 +101,40 @@ export default function AddAddress(props: info) {
                 <Box>
                     <FormControl>
                         <FormLabel>Street:</FormLabel>
-                        <Input placeholder='Estrada Avizinha' name='street' value={formData.street} onChange={handleChange}/>
+                        <Input placeholder='Estrada Avizinha' name='street' value={formData.street} onChange={handleChange} data-cy="addAinputS"/>
                     </FormControl>
                     <FormControl>
                         <FormLabel>Neighborhood:</FormLabel>
-                        <Input placeholder='Fernandita' name='neighborhood' value={formData.neighborhood} onChange={handleChange}/>
+                        <Input placeholder='Fernandita' name='neighborhood' value={formData.neighborhood} onChange={handleChange} data-cy="addAinputNH"/>
                     </FormControl>
                     <Flex>
                         <FormControl mt={4}>
                             <FormLabel>Number:</FormLabel>
-                            <Input placeholder='1234' name='number' value={formData.number} onChange={handleChange}/>
+                            <Input placeholder='1234' name='number' value={formData.number} onChange={handleChange} data-cy="addAinputNo"/>
                         </FormControl>
                         <FormControl mt={4}>
                             <FormLabel>Complement:</FormLabel>
-                            <Input placeholder='Casa 23' name='complement' value={formData.complement} onChange={handleChange}/>
+                            <Input placeholder='Casa 23' name='complement' value={formData.complement} onChange={handleChange} data-cy="addAinputC"/>
                         </FormControl>
                     </Flex>
                     <Flex>
                         <FormControl mt={4}>
                             <FormLabel>City:</FormLabel>
-                            <Input placeholder="Taboão da Serra" name='city' value={formData.city} onChange={handleChange}/>
+                            <Input placeholder="Taboão da Serra" name='city' value={formData.city} onChange={handleChange} data-cy="addAinputCt"/>
                         </FormControl>
                         <FormControl mt={4}>
                             <FormLabel>UF:</FormLabel>
-                            <Input placeholder='SP' type='string' name='uf' value={formData.uf} minLength={2} maxLength={2} onChange={handleChange}/>
+                            <Input placeholder='SP' type='string' name='uf' value={formData.uf} minLength={2} maxLength={2} onChange={handleChange} data-cy="addAinputUF"/>
                         </FormControl>
                     </Flex>
                     <Flex>
                         <FormControl mt={4}>
                             <FormLabel>Country:</FormLabel>
-                            <Input placeholder='Canadá' type='string' name='country' value={formData.country} onChange={handleChange}/>
+                            <Input placeholder='Canadá' type='string' name='country' value={formData.country} onChange={handleChange} data-cy="addAinputCo"/>
                         </FormControl>
                         <FormControl mt={4}>
                             <FormLabel>ZIP Code:</FormLabel>
-                            <Input placeholder='12345687' type='string' name='zipCode' value={formData.zipCode} onChange={handleChange}/>
+                            <Input placeholder='12345687' type='string' name='zipCode' value={formData.zipCode} onChange={handleChange} data-cy="addAinputZip"/>
                         </FormControl>
                     </Flex>
                     <RadioGroup onChange={handleRadio}
@@ -145,13 +145,13 @@ export default function AddAddress(props: info) {
                         defaultValue='1'
                         colorScheme='purple'
                         >
-                        <Radio value="1">Main Address</Radio>
-                        <Radio value="2">Secondary Address</Radio>
+                        <Radio value="1" data-cy="addARMA">Main Address</Radio>
+                        <Radio value="2" data-cy="addARSA">Secondary Address</Radio>
                     </RadioGroup>
                 </Box>
             </ModalBody>
             <ModalFooter justifyContent={"center"}>
-                <Button color='white' bg={"main.100"} onClick={handleSubmit}>
+                <Button color='white' bg={"main.100"} onClick={handleSubmit}  data-cy="addAB">
                     {props.buttonText}
                 </Button>
             </ModalFooter>
