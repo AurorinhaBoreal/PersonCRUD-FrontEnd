@@ -7,7 +7,7 @@ export default function PersonHeader() {
 
     return (
         <Box className={styles.pHeaderContainer} bg="main.100">
-            <PlusIcon isOnCard={false} isButtonStyle modalSelect="createPerson" index={0} cpf={""} />
+            <PlusIcon isOnCard={false} isButtonStyle modalSelect="createPerson" index={0} cpf={""} data-cy="add-person"/>
             <Text className={styles.pHeaderText}>
                 Person List
             </Text>
