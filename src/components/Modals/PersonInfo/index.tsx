@@ -128,6 +128,8 @@ export default function PersonInfo(props: info) {
                                 <Text className={styles.info}>{mainAddress?.city}</Text>
                                 <Text className={styles.infoDesc}>ST.</Text>
                                 <Text className={styles.info}>{mainAddress?.uf}</Text>
+                                <Text className={styles.infoDesc}>Compl.</Text>
+                                <Text className={styles.info}>{mainAddress?.complement}</Text>
                             </Flex>
                             <Flex className={styles.line}>
                                 <Text className={styles.infoDesc}>Co.</Text>

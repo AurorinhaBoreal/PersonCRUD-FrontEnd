@@ -86,7 +86,7 @@ export default function PersonCard(props: info) {
                     {showAddress ?  
                         (<>
                             <Box className={styles.topInfo}>
-                                {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number}
+                                {addressInfo.street}, {addressInfo.neighborhood}, {addressInfo.number} - {addressInfo.complement}
                             </Box>
                             <Box className={styles.bottomInfo}>
                                 {addressInfo.city}, {addressInfo.uf} - {addressInfo.zipCode} ({addressInfo.country})
