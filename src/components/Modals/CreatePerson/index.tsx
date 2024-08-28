@@ -99,33 +99,33 @@ export default function CreatePerson(props: info) {
                     <Text className={styles.avatarTitle}>Your Avatar</Text>
                     <Flex className={styles.optionsWrapper}>
                         {avatars.map((avatar, index) => (
-                            <Image key={index} className={styles.avatarImgs} src={avatar} onClick={() => setAvatarImage(index)}/>
+                            <Image key={index+"icon"} className={styles.avatarImgs} src={avatar} onClick={() => setAvatarImage(index)}/>
                         ))}
                     </Flex>
                 </Flex>
                 <Box display={"flex"}>
                     <FormControl mt={4}>
                         <FormLabel>First Name:</FormLabel>
-                        <Input placeholder='First name' name='firstName' value={formData.firstName} onChange={handleChange}/>
+                        <Input placeholder='First name' name='firstName' value={formData.firstName} onChange={handleChange} data-cy="addPinputFN"/>
                     </FormControl>
                     <FormControl mt={4}>
                         <FormLabel>Last Name:</FormLabel>
-                        <Input placeholder='Last name' name='lastName' value={formData.lastName} onChange={handleChange}/>
+                        <Input placeholder='Last name' name='lastName' value={formData.lastName} onChange={handleChange} data-cy="addPinputLN"/>
                     </FormControl>
                 </Box>
                 <Box display={"flex"}>
                     <FormControl mt={4}>
                         <FormLabel>CPF:</FormLabel>
-                        <Input className={styles.inputs} placeholder='123.456.789-00' as={InputMask} mask={"999.999.999-99"} maskChar={null} name='cpf' value={formData.cpf} onChange={handleChange}/>
+                        <Input className={styles.inputs} placeholder='123.456.789-00' as={InputMask} mask={"999.999.999-99"} maskChar={null} name='cpf' value={formData.cpf} onChange={handleChange} data-cy="addPinputCPF"/>
                     </FormControl>
                         <FormControl mt={4}>
                         <FormLabel>Birth Date:</FormLabel>
-                        <Input placeholder='12/05/1997' type='date' name='birthDate' value={formData.birthDate} onChange={handleChange}/>
+                        <Input placeholder='12/05/1997' type='date' name='birthDate' value={formData.birthDate} onChange={handleChange} data-cy="addPinputBF"/>
                     </FormControl>
                 </Box>
             </ModalBody>
             <ModalFooter justifyContent={"center"}>
-                <Button color='white' bg={"main.100"} onClick={handleSubmit}>
+                <Button color='white' bg={"main.100"} onClick={handleSubmit} data-cy="addPB">
                     {props.buttonText}
                 </Button>
             </ModalFooter>
