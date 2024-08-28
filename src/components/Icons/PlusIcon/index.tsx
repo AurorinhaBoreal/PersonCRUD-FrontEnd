@@ -30,6 +30,7 @@ export default function PlusIcon(props: buttonInfo) {
                         icon={<AddIcon color="main.100" w="1.3rem" h="1.3rem" />}
                         _hover={{ backgroundColor: "frost.200" }}
                         onClick={onOpen}
+                        data-cy="add-person"
                     />
                 ) :
                 <AddIcon
